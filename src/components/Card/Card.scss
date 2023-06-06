@@ -1,0 +1,136 @@
+@import "../../variables";
+
+.card {
+  width: 250px;
+  //height: 341px;
+  background: $plain-milkyway;
+  box-shadow: $shadow;
+  border-radius: 3px;
+  overflow: hidden;
+
+  &-image {
+    display: flex;
+    justify-content: center;
+    height: 222px;
+    background-color: white;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .card-body {
+    padding: 25px 15px;
+
+    &.sm {
+      padding: 25px 15px 32px;
+    }
+
+    .card-price {
+      @include bold-18px;
+      color: $dark-blue;
+      margin-bottom: 10px;
+    }
+
+    .card-title {
+      font-family: "HelveticaNeueCyr";
+      @include product-name-16px-roman;
+      line-height: 17px;
+      color: $dark-blue;
+      height: 32px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-amount {
+      margin-top: 5px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 0.0005em;
+      color: $dark-blue;
+    }
+
+    .card-rating {
+      display: flex;
+      align-items: center;
+      margin-top: 10px; // 5px; Changes as some title letters would not fit
+      height: 20px;
+      width: 200px;
+
+      //&:before {
+      //  content: '';
+      //  position: absolute;
+      //  top: 0;
+      //  left: 0;
+      //  right: 0;
+      //  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.0833 5.63406L11.1008 4.90408L8.8735 0.352135C8.81267 0.227506 8.71259 0.126615 8.58896 0.0652895C8.2789 -0.0890138 7.90212 0.0395723 7.74709 0.352135L5.51978 4.90408L0.537272 5.63406C0.399904 5.65384 0.274311 5.71912 0.178154 5.81803C0.0619057 5.93848 -0.00215256 6.10053 5.52333e-05 6.26856C0.00226303 6.4366 0.0705563 6.59688 0.189929 6.71418L3.79484 10.2572L2.94316 15.2602C2.92319 15.3766 2.93596 15.4963 2.98004 15.6057C3.02411 15.7151 3.09772 15.8099 3.19252 15.8793C3.28732 15.9488 3.39951 15.99 3.51637 15.9984C3.63324 16.0068 3.7501 15.982 3.85371 15.9269L8.3103 13.5648L12.7669 15.9269C12.8886 15.9922 13.0298 16.0139 13.1653 15.9902C13.5067 15.9308 13.7363 15.6044 13.6774 15.2602L12.8258 10.2572L16.4307 6.71418C16.5288 6.61724 16.5935 6.49064 16.6132 6.35216C16.6662 6.00597 16.4267 5.68549 16.0833 5.63406Z'/%3E%3C/svg%3E%0A") !important;
+      //  background-size: 16px;
+      //}
+    }
+  }
+}
+
+@media (max-width: $breakpoint-3) and (min-width: $breakpoint-4 + 1) {
+  .card {
+    width: 216px;
+    box-shadow: $shadow-m;
+    .card-image {
+      height: 177px;
+    }
+
+    .card-body {
+      padding: 20px 13px 28px;
+
+      .card-price {
+        margin-bottom: 6px;
+      }
+
+      .card-title {
+        font-size: 16px;
+        line-height: 16px;
+        height: 32px;
+      }
+
+      .card-rating {
+        margin-top: 10px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-4) {
+  .card {
+    width: 162px;
+    box-shadow: $shadow-s;
+    .card-image {
+      height: 133px;
+    }
+
+    .card-body {
+      padding: 15px 10px 20px;
+
+      .card-price {
+        margin-bottom: 6px;
+        font-size: 12px;
+        line-height: 12px;
+      }
+
+      .card-title {
+        font-size: 12px;
+        line-height: 12px;
+        height: 24px;
+      }
+
+      .card-rating {
+        margin-top: 5px;
+        height: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../../../variables";
+
+.becomeVendor {
+  margin-top: 90px;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.0005em;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      height: 45px;
+      width: 300px;
+      background: $pink;
+      border-radius: 6px;
+      margin-top: 30px;
+      font-size: 18px;
+      color: $white;
+      font-weight: bold;
+      margin-right: 20px;
+    }
+
+    .pinkBtn {
+      background: transparent;
+      color: $pink;
+      border: 3px solid $pink;
+      border-radius: 6px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .becomeVendor {
+    h2 {
+      font-size: 25px;
+      line-height: 28px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .becomeVendor {
+    .buttons {
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

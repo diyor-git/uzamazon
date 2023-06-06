@@ -1,0 +1,83 @@
+@import "../../variables";
+.carousel {
+  position: relative;
+
+  &.sm {
+    .swiper-slide-active {
+      // margin-left: 5px; //to show the shadow-right of the first card in carousel
+    }
+  }
+
+  .swiper-wrapper {
+    .swiper-slide {
+      width: fit-content;
+      .card {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .card-wrapper {
+    width: 100%;
+
+    .card-scroll {
+      display: flex;
+    }
+  }
+}
+
+.direction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  height: 55px;
+  width: 55px;
+  padding: 0;
+  background: $white;
+  box-shadow: $shadow;
+  z-index: 3;
+  border-radius: 50%;
+
+  &.left {
+    left: 0;
+    transform: translate(-50%, -50%);
+
+    &.nc {
+      left: 10px;
+    }
+
+    svg {
+      margin-right: 2px;
+    }
+  }
+
+  &.right {
+    right: 0;
+    transform: translate(50%, -50%);
+    &.nc {
+      right: 0;
+    }
+    svg {
+      margin-left: 2px;
+    }
+  }
+
+  svg {
+    fill: $grey-3;
+  }
+}
+@media (max-width: 768px) {
+  .carousel {
+    .direction {
+      display: none;
+    }
+    .swiper-wrapper {
+      .swiper-slide {
+        width: fit-content;
+      }
+    }
+  }
+}

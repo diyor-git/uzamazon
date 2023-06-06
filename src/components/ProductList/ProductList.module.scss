@@ -1,0 +1,367 @@
+@import "../../variables";
+
+.productListContainer {
+    margin-top: 90px;
+
+    .productListHeader {
+        h1 {
+            @include bold-48px;
+            color: $dark-blue;
+        }
+
+        .productListHeaderActions {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+
+            @include navbar-20px-roman;
+            color: $grey-2;
+
+            > span {
+                padding-right: 2rem;
+            }
+
+            .headerActionsSelect {
+                width: 250px;
+                margin-left: 20px;
+            }
+
+            .productListSortingMobile {
+                display: none;
+                align-items: center;
+                width: 100%;
+                position: relative;
+                margin-top: 15px;
+
+                .productListSortingMobileCollapse {
+                    width: 100%;
+                    overflow: auto;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    border: 2px solid $pink;
+                    box-sizing: border-box;
+                    border-radius: 20px;
+                    color: $pink;
+                    height: 30px;
+                    display: flex;
+                    background: transparent;
+                    padding: 0 13px;
+                    margin-right: 6px;
+
+                    span {
+                        margin-left: 7px;
+                        font-size: 14px;
+                        line-height: 14px;
+                        letter-spacing: 0.0005em;
+                    }
+                }
+
+                .p-1 .stars {
+                    display: flex;
+
+                    p {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .productListBody {
+        display: flex;
+        flex-direction: row;
+        margin-top: 22px;
+
+        .productListSortWrapper {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 250px;
+            min-width: 250px;
+            height: fit-content;
+            margin-right: 20px;
+            padding: 20px 20px 10px;
+
+            .productListSort {
+                margin-bottom: 30px;
+
+                h3 {
+                    @include bold-18px;
+                    color: $dark-blue;
+                    margin-bottom: 15px;
+                }
+
+                > ul {
+                    padding: 0 5px;
+                    @include product-name-16px-roman;
+                    color: $grey-2;
+
+                    &.p0 {
+                        li.stars {
+                            padding: 0;
+                            user-select: none;
+
+                            &.active {
+                                color: $pink;
+                            }
+                        }
+                    }
+
+                    &:not(:last-of-type) {
+                        margin-bottom: 20px;
+                    }
+
+                    > li {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 10px;
+                        padding-left: 10px;
+
+                        input {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .productListPaginationWrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 40px;
+        }
+    }
+
+    section {
+        &.banner-bottom {
+            display: flex;
+            width: 100%;
+            padding-top: 310px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+            margin-top: 90px;
+        }
+    }
+}
+
+.productListSortingMobileCollapse {
+    :global {
+        .ant-collapse {
+            display: flex;
+            background: transparent;
+            border: none;
+
+            .ant-collapse-item,
+            .ant-collapse-item:last-child {
+                margin-right: 6px;
+                user-select: none;
+                border: none;
+
+                .ant-collapse-header {
+                    display: flex;
+                    align-items: center;
+                    height: 30px;
+                    padding: 0 13px;
+                    padding-right: 33px;
+                    background: transparent;
+                    border: 2px solid #4f4f4f;
+                    border-radius: 50px;
+
+                    .ant-collapse-arrow {
+                        padding: 0 13px 0 7px;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+
+            .ant-collapse-content {
+                position: absolute;
+                top: 45px;
+                left: calc(var(--header-main-fixed-padding) * -1);
+                width: 100vw;
+                padding-top: 10px;
+                border: none;
+                z-index: 5;
+
+                .ant-collapse-content-box {
+                    padding: 20px var(--header-main-fixed-padding) 30px;
+                    border-top: 1px solid $grey-5;
+                    border-bottom: 1px solid $grey-5;
+
+                    :local(.productListSort) {
+                        flex-direction: column;
+
+                        &:global(.ant-collapse-item, .ant-collapse-item:last-child) {
+                            margin-right: 6px;
+                            user-select: none;
+                            border: none;
+
+                            .ant-collapse-header {
+                                display: flex;
+                                align-items: center;
+                                height: 30px;
+                                padding: 0 13px;
+                                padding-right: 33px;
+                                background: transparent;
+                                border: 2px solid #4f4f4f;
+                                border-radius: 50px;
+
+                                .ant-collapse-arrow {
+                                    padding: 0 13px 0 7px;
+                                    top: 50%;
+                                    right: 0;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                        }
+
+                        h3 {
+                            margin-bottom: 12px;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 18px;
+                            color: $dark-blue;
+                        }
+
+                        ul {
+                            li {
+                                input {
+                                    width: 14px;
+                                    height: 14px;
+                                }
+                                label {
+                                    font-size: 14px;
+
+                                    &::before {
+                                        max-width: 14px;
+                                        min-width: 14px;
+                                        height: 14px;
+                                    }
+                                }
+                            }
+                        }
+
+                        > ul {
+                            li {
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-2) and (min-width: ($breakpoint-3 + 1)) {
+    .productListContainer {
+        margin-top: 50px;
+        margin-bottom: 142px;
+
+        .productListHeader {
+            h1 {
+                font-size: 42px;
+                line-height: 42px;
+            }
+
+            .productListHeaderActions {
+                margin-top: 15px;
+            }
+        }
+
+        .productListBody {
+            margin-top: 20px;
+
+            .productListSortWrapper {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-3) {
+    .productListContainer {
+        .productListHeader {
+            .productListHeaderActions {
+                flex-direction: column;
+                align-items: flex-start;
+                font-size: 15px;
+
+                .productListSortingMobile {
+                    display: flex;
+                }
+            }
+            .productListHeaderSorting {
+                display: none;
+            }
+        }
+
+        .productListBody {
+            .productListSortWrapper {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-3) and (min-width: $breakpoint-4 + 1) {
+    .productListContainer {
+        margin-top: 40px;
+        margin-bottom: 90px;
+
+        .productListHeader {
+            h1 {
+                font-size: 30px;
+                line-height: 30px;
+            }
+
+            .productListHeaderActions {
+                margin-top: 10px;
+            }
+        }
+
+        .productListBody {
+            margin-top: 18px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-4) {
+    .productListContainer {
+        margin-top: 30px;
+        margin-bottom: 90px;
+
+        .productListHeader {
+            h1 {
+                font-size: 24px;
+                line-height: 24px;
+            }
+
+            .productListHeaderActions {
+                margin-top: 5px;
+            }
+        }
+
+        .productListBody {
+            margin-top: 20px;
+        }
+
+        .productListPaginationWrapper {
+            margin-top: 25px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "personalData": "Personal data:",
+  "city": "City:",
+  "district": "District:",
+  "street": "Street:",
+  "house": "House number:",
+  "apartments": "Apartment number:",
+  "changeData": "Change data",
+  "paymentMethod": "Payment method:",
+  "cash": "Cash",
+  "comment": "Comment on the order:",
+  "orderPrice": "Amount to pay:",
+  "pay": "Pay"
+}

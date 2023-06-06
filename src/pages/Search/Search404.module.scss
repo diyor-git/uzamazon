@@ -1,0 +1,54 @@
+@import '../../variables';
+
+.search404 {
+  .content404 {
+    h2 {
+      font-family: 'HelveticaNeueCyr', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 48px;
+      color: $dark-blue;
+      margin: 70px 0 20px 0;
+    }
+
+    p,
+    .like {
+      font-family: 'HelveticaNeueCyr', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      color: $dark-blue;
+      margin-bottom: 100px;
+    }
+
+    .like {
+      font-weight: bold;
+      margin-top: 200px;
+      margin-bottom: 0;
+    }
+
+    img {
+      margin: 70px auto 50px auto;
+      text-align: center;
+      display: flex;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .search404 {
+    .content404 {
+      h2{
+        font-size: 30px;
+        line-height: 32px;
+      }
+      p{
+        font-size: 18px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

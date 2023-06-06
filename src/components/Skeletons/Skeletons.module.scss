@@ -1,0 +1,100 @@
+@import "../../variables.scss";
+
+.productListSortSkeleton {
+    width: 100%!important;
+    height: 800px!important;
+    max-width: 250px;
+    padding: 0!important;
+
+    background-color: $grey-6;
+    background-image: linear-gradient(
+        110deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0.33) 50%,
+        rgba(255, 255, 255, 0) 60%
+    );
+    background-size: 200% 100%;
+    background-position-x: 150%;
+    :global {
+        animation: 1.5s loading50 ease-in-out infinite;
+    }
+}
+
+.cardSkeleton {
+    width: 250px;
+    min-height: 364px;
+    background: $white;
+    box-shadow: $shadow;
+    border-radius: 3px;
+
+    &:global(.mva){
+        width: 100%;
+    }
+
+    @media (max-width: $breakpoint-3) and (min-width: $breakpoint-4 + 1) {
+        width: 216px;
+        box-shadow: $shadow-m;
+    }
+
+    @media (max-width: $breakpoint-4) {
+        width: 162px;
+        box-shadow: $shadow-s;
+    }
+}
+
+.circleSkeleton {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    animation-delay: 0.06s;
+}
+
+.textSkeleton,
+.headingSkeleton {
+    display: inline-block;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.headingSkeleton {
+    min-height: 48px;
+    max-width: 500px;
+    animation-delay: 0.08s;
+}
+
+.textSkeleton {
+    font-size: 1.5rem;
+    min-height: 18px;
+    max-width: 350px;
+    animation-delay: 0.06s;
+}
+
+.textSkeleton,
+.headingSkeleton,
+.cardSkeleton,
+.circleSkeleton {
+    background-color: $grey-6;
+    background-image: linear-gradient(
+        110deg,
+        rgba(255, 255, 255, 0) 35%,
+        rgba(255, 255, 255, 0.33) 50%,
+        rgba(255, 255, 255, 0) 65%
+    );
+    background-size: 200% 100%;
+    background-position-x: 160%;
+    :global {
+        animation: 1.5s loading60 ease-in-out infinite;
+    }
+}
+
+@keyframes :global(loading60) {
+    to {
+        background-position-x: -60%;
+    }
+}
+
+@keyframes :global(loading50) {
+    to {
+        background-position-x: -50%;
+    }
+}

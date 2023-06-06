@@ -1,0 +1,15 @@
+{
+  "account": "Account",
+  "changePhoto": "Change profile photo",
+  "history": "History of orders",
+  "saveChanges": "Save changes",
+  "deleteProfile": "Delete profile",
+  "deleteWarning": "If you delete your profile, you will lose all information about your account and purchases",
+  "delete": "Are you sure you want to delete your profile?",
+  "oldPassword": "Old password:",
+  "newPassword": "New password:",
+  "repeatPassword": "Repeat password:",
+  "changePassword": "Change password",
+  "deleteImg" : "Delete"
+
+}

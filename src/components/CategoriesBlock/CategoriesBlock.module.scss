@@ -1,0 +1,55 @@
+@import '../../variables.scss';
+
+.productListSortWrapper {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 250px;
+    min-width: 250px;
+    height: fit-content;
+    margin-right: 20px;
+    padding: 20px 20px 10px;
+
+    .productListSort {
+        margin-bottom: 30px;
+
+        h3 {
+            @include bold-18px;
+            color: $dark-blue;
+            margin-bottom: 15px;
+        }
+
+        > ul {
+            padding: 0 5px;
+            @include product-name-16px-roman;
+            color: $grey-2;
+
+            &.p0 {
+                li.stars {
+                    padding: 0;
+                    user-select: none;
+
+                    &.active {
+                        color: $pink;
+                    }
+                }
+            }
+
+            &:not(:last-of-type) {
+                margin-bottom: 20px;
+            }
+
+            > li {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                padding-left: 10px;
+
+                input {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

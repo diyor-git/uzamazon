@@ -1,0 +1,448 @@
+@import "../../../variables";
+
+.ant-progress-inner {
+  border: none;
+}
+
+.ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
+  stroke: $pink;
+}
+
+.cabinetBanner {
+  margin: 0;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.statistics {
+  .statisticsContainer {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  form {
+    width: 420px;
+  }
+
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+
+  .progressBar {
+    .progress {
+      display: block;
+      margin-bottom: 30px;
+
+      .ant-progress-text {
+        font-weight: bold;
+        color: $pink;
+        font-size: 36px;
+        line-height: 36px;
+      }
+    }
+
+    .ant-progress-status-success .ant-progress-text {
+      color: #52c41a;
+    }
+  }
+
+  .date {
+    .dateInput {
+      width: 420px;
+      margin-bottom: 20px;
+    }
+  }
+
+
+  .sold,
+  .loaded {
+    display: block;
+
+    p {
+      display: inline;
+      color: $black;
+      font-weight: bold;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 20px;
+      color: $pink;
+      margin-left: 5px;
+    }
+  }
+
+
+  .products {
+    margin-top: 180px;
+
+    .import {
+      text-align: right;
+
+      button {
+        width: 250px;
+        margin-right: 20px;
+      }
+
+      .pinkBtn {
+        background: transparent;
+        color: $pink;
+        border: 3px solid $pink;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  button {
+    height: 45px;
+    width: 100%;
+    background: $pink;
+    border-radius: 6px;
+    margin-top: 30px;
+    font-size: 18px;
+    color: $white;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 18px;
+    color: $grey-3;
+    margin-top: 20px;
+  }
+
+  .profile_data {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    .forms {
+      h4 {
+        font-size: 20px;
+        color: $dark-blue;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      textarea {
+        width: 100%;
+        border: 1px solid #BDBDBD;
+        border-radius: 2px;
+        display: block;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+
+      button {
+        width: 420px;
+      }
+    }
+
+    .avatar-wrapper {
+      margin-right: 110px;
+    }
+
+    .name {
+      margin-right: 80px;
+    }
+
+    .password {
+      button {
+        border: 3px solid $pink;
+        background: transparent;
+        color: $pink;
+      }
+    }
+  }
+
+  .deleteAcc {
+    margin-top: 100px;
+    margin-bottom: 120px;
+
+    h3 {
+      font-family: "HelveticaNeueCyr", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 24px;
+      color: $dark-blue;
+      cursor: pointer;
+    }
+  }
+}
+
+@media(max-width: 1440px) {
+  .modalProfile {
+    .bold-36px {
+      font-size: 36px;
+    }
+
+    .ant-modal-content {
+      padding-top: 90px;
+      padding-bottom: 80px;
+    }
+
+    .ant-modal-footer {
+      text-align: center;
+      border: none;
+
+      button {
+        width: 180px;
+        height: 45px;
+        background: $pink;
+        border-radius: 5px;
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: $white;
+      }
+
+      .deleteButton {
+        color: $pink;
+        border: 3px solid $pink;
+        background: transparent;
+      }
+    }
+
+    .ant-modal-body {
+      text-align: center;
+
+      h3,
+      p {
+        font-weight: bold;
+        font-family: "HelveticaNeueCyr", sans-serif;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 24px;
+        color: $dark-blue;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 21px;
+        color: $grey-3;
+      }
+    }
+  }
+
+  .profilePage {
+    form {
+      width: 100%;
+
+      .input-container:not(:first-of-type) {
+        margin-top: 20px;
+      }
+    }
+
+    .statistics {
+      margin-top: 90px;
+    }
+
+    button {
+      height: 45px;
+      width: 100%;
+      background: $pink;
+      border-radius: 6px;
+      margin-top: 30px;
+      font-size: 18px;
+      color: $white;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 18px;
+      color: $grey-3;
+      margin-top: 20px;
+    }
+
+    .profile_data {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+
+      .password {
+        button {
+          border: 3px solid $pink;
+          background: transparent;
+          color: $pink;
+        }
+      }
+    }
+
+    .deleteAcc {
+      margin-top: 100px;
+      margin-bottom: 120px;
+
+      h3 {
+        font-family: "HelveticaNeueCyr", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 24px;
+        color: $dark-blue;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media(max-width: 1200px) {
+  .profilePage {
+    .profile_data {
+      .avatar-wrapper {
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    form {
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .profilePage {
+    .profile_data {
+      grid-template-columns: 1fr 3fr;
+      gap: 0 40px;
+
+      .name {
+        margin: 0;
+      }
+
+      .forms {
+        grid-template-columns: 1fr;
+        gap: 60px 0;
+      }
+
+      .avatar-wrapper {
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    form {
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 568px) {
+  .profilePage {
+    .deleteAcc {
+      p {
+        font-size: 15px;
+        line-height: 17px;
+      }
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+
+    .profile_data {
+      grid-template-columns: 1fr;
+      gap: 30px 0;
+
+      .name {
+        margin: 0;
+      }
+
+      .forms {
+        grid-template-columns: 1fr;
+        gap: 60px 0;
+      }
+
+      .avatar-wrapper {
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    form {
+      width: 100%;
+    }
+  }
+  .modalProfile {
+    .ant-modal-content {
+      padding: 20px 0 20px 0;
+    }
+
+    .ant-modal-body {
+      text-align: center;
+
+      h3 {
+        font-size: 18px;
+        line-height: 14px;
+        color: $dark-blue;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 14px;
+        color: $grey-3;
+      }
+    }
+
+    .ant-modal-footer {
+      button {
+        margin: 10px 10px 0 0 !important;
+      }
+    }
+  }
+}
+
+
+.modalProfile {
+  .ant-modal-content {
+    padding-top: 90px;
+    padding-bottom: 80px;
+  }
+
+  .ant-modal-footer {
+    text-align: center;
+    border: none;
+
+    button {
+      width: 180px;
+      height: 45px;
+      background: $pink;
+      border-radius: 5px;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: $white;
+    }
+
+    .deleteButton {
+      color: $pink;
+      border: 3px solid $pink;
+      background: transparent;
+    }
+  }
+
+  .ant-modal-body {
+    text-align: center;
+
+    h3,
+    p {
+      font-weight: bold;
+      font-family: "HelveticaNeueCyr", sans-serif;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 24px;
+      color: $dark-blue;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 21px;
+      color: $grey-3;
+    }
+  }
+}

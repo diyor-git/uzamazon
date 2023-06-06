@@ -1,0 +1,124 @@
+@import "../../variables";
+
+.select-container {
+  display: flex;
+  flex-direction: column;
+  label {
+    margin-bottom: 10px;
+  }
+
+  .select-arrow {
+    &.stroke-grey-3 {
+      stroke: $grey-3;
+    }
+  }
+}
+
+.select-error {
+  .ant-select-selector {
+    border-color: $pink !important;
+  }
+  .select-arrow {
+    &.stroke-grey-3 {
+      stroke: $pink;
+    }
+  }
+}
+
+span.error-field {
+  display: flex;
+  height: 16px;
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.0005em;
+  color: $pink;
+  animation: 200ms error-appear ease-in-out;
+  z-index: 1;
+}
+
+.bc-grey-4 {
+  .ant-select-selector {
+    border-color: $grey-4 !important;
+  }
+}
+
+.select-error {
+  .ant-select-selector {
+    border-color: $pink !important;
+  }
+}
+
+.h-40px {
+  .ant-select-selector {
+    height: 40px !important;
+  }
+}
+
+.ant-select-selector {
+  display: flex;
+  align-items: center;
+  padding: 0 10px !important;
+  width: inherit !important;
+  height: 36px !important;
+  border: 1px solid $grey-3 !important;
+
+  .ant-select-selection-item {
+    @include roman-18px;
+    color: $grey-2;
+  }
+}
+
+.select-wrapper {
+  .select-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 36px;
+    position: relative;
+    padding: 0 10px;
+    border: 1px solid $grey-3;
+    border-radius: 2px;
+    user-select: none;
+    .select-header-title {
+    }
+
+    .select-header-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 10px 0 20px;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 30%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
+  }
+
+  .select-list {
+    display: none;
+    position: absolute;
+    .select-list-item {
+    }
+  }
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  box-shadow: none;
+}
+
+.ant-select-arrow {
+  right: 15px;
+}
+
+.ant-select-selection-placeholder {
+  @include roman-18px;
+  color: $grey-3;
+}

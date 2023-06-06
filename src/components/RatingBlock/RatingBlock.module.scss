@@ -1,0 +1,90 @@
+@import '../../variables';
+
+.rating {
+  width: 385px;
+  height: 348px;
+  background: $white;
+  box-shadow: 0 2px 6px rgba(106, 106, 106, 0.26);
+  border-radius: 2px;
+  padding: 25px;
+
+  button {
+    width: 180px;
+    height: 46px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0 auto;
+  }
+
+  .orangeButton {
+    background: #ECAE10;
+    color: $white;
+  }
+
+  .pinkButton {
+    border: 3px solid $pink;
+    color: $pink;
+  }
+
+  .reviews {
+    margin: 13px 0 20px 0;
+  }
+
+  .ratingBar {
+    display: flex;
+
+    p {
+      width: 90px;
+      padding-top: 4px;
+    }
+  }
+
+  .stars {
+    display: flex; 
+    align-items: center;
+
+    p {
+      padding-left: 12px;
+    }
+  }
+
+  h4 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    color: $dark-blue;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: $grey-2;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .rating {
+    width: 385px;
+    height: 348px;
+    margin: 30px auto 10px auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .rating {
+    width: 100%;
+    height: 270px;
+    margin: 30px auto 10px auto;
+    padding: 20px;
+    .pinkButton{
+      display: none;
+    }
+  }
+}

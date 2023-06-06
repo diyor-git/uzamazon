@@ -1,0 +1,124 @@
+@import "../../variables";
+
+.reviews {
+  h4 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 24px;
+    color: $dark-blue;
+    margin-bottom: 25px;
+  }
+
+  .review {
+    width: 1060px;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    background: $white;
+    box-shadow: 0 2px 6px rgba(106, 106, 106, 0.26);
+    border-radius: 2px;
+    padding: 20px 20px 45px 20px;
+    margin-bottom: 30px;
+
+    .avatar {
+      margin-right: 20px;
+    }
+  }
+
+  .reviewContainer {
+    .title {
+      display: flex;
+
+      p {
+        font-size: 18px;
+        line-height: 18px;
+        color: $grey-3;
+      }
+
+      h5 {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 18px;
+        color: $dark-blue;
+        margin-right: 20px;
+        margin-bottom: 5px;
+      }
+    }
+
+    .reviewText {
+      p {
+        font-size: 18px;
+        line-height: 21px;
+        color: $grey-2;
+        margin-top: 25px;
+      }
+
+      img {
+        margin-right: 15px;
+        margin-top: 20px;
+        width: 80px;
+        height: 100px;
+        object-fit: contain;
+        background: $white;
+        border-radius: 2px;
+        border: 1px solid #828282;
+      }
+    }
+  }
+
+  .paginationWrapper {
+    display: flex;
+    justify-content: center;
+    width: 1060px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .reviews {
+    .review, .paginationWrapper {
+      width: 964px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .reviews {
+    .review, .paginationWrapper {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews {
+    h4 {
+      font-size: 30px;
+    }
+    .reviewContainer {
+      .title {
+        flex-direction: column;
+      }
+    }
+
+    .review, .paginationWrapper {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .reviews {
+    h4 {
+      font-size: 25px;
+    }
+    .reviewContainer {
+      .title {
+        flex-direction: column;
+      }
+    }
+
+    .review, .paginationWrapper {
+      width: 100%;
+    }
+  }
+}

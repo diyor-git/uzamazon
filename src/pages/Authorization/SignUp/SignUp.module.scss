@@ -1,0 +1,246 @@
+@import "../../../variables";
+
+.errorsDiv {
+  margin-top: 5px;
+}
+.errors {
+  font-size: 15px;
+  color: $pink;
+}
+.title h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 0.0005em;
+  color: $dark-blue;
+}
+
+
+.loginPage {
+  display: grid;
+  grid-template-columns: 56% 1fr;
+
+  .bannerWrapper {
+    position: relative;
+
+    .banner {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 56%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+  }
+}
+
+.loginWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 65px 0;
+
+  .loginContainer {
+    width: 520px;
+    box-shadow: 0px 2px 6px rgba(106, 106, 106, 0.26);
+    border-radius: 5px;
+    background: $white;
+    padding: 50px;
+
+    .title {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      h2 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+        letter-spacing: 0.0005em;
+        color: $dark-blue;
+      }
+    }
+
+    a {
+      text-align: right;
+      margin: auto 0 auto auto;
+
+      img {
+        width: 135px;
+      }
+    }
+
+    .loginForm {
+      margin-top: 45px;
+
+      form {
+        .inputContainer,
+        .selectContainer {
+          &:not(:first-of-type) {
+            margin-top: 20px;
+          }
+        }
+
+        label {
+          display: flex;
+          justify-content: space-between;
+
+          a,
+          span {
+            color: $grey-3;
+          }
+        }
+      }
+
+      select {
+        height: 40px;
+        width: 100%;
+        border: 1px solid #bdbdbd;
+        border-radius: 2px;
+        padding: 5px;
+      }
+
+      .check {
+        margin-top: 25px;
+
+        label {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+        }
+
+        p {
+          font-family: "HelveticaNeueCyr", sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          color: $grey-2;
+        }
+      }
+
+      button {
+        height: 45px;
+        width: 100%;
+        background: $pink;
+        border-radius: 6px;
+        margin-top: 30px;
+        font-size: 18px;
+        color: $white;
+        font-weight: bold;
+      }
+
+      .signup {
+        margin-top: 20px;
+        text-align: right;
+
+        a {
+          color: $grey-3;
+        }
+      }
+
+      .password {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        p {
+          margin: 20px 0 auto auto;
+          font-size: 16px;
+          color: $grey-3;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .loginPage {
+    grid-template-columns: 1fr 1fr;
+
+    .bannerWrapper {
+      .banner {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .loginPage {
+    grid-template-columns: 1fr;
+
+    .bannerWrapper {
+      .banner {
+        width: 100%;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .loginWrapper {
+    .loginContainer {
+      width: 335px;
+      padding: 25px;
+
+      .title {
+        h2 {
+          font-size: 24px;
+        }
+      }
+
+      a {
+        img {
+          width: 108px;
+        }
+      }
+
+      .loginForm {
+        h3 {
+          margin: 12px 0 5px;
+          font-size: 12px;
+          line-height: 12px;
+        }
+
+        label {
+          p {
+            font-size: 12px;
+          }
+        }
+
+        input {
+          font-size: 12px;
+          height: 40px;
+        }
+
+        select {
+          font-size: 11px;
+          height: 25px;
+        }
+
+        button {
+          font-size: 14px;
+          height: 32px;
+        }
+
+        .password {
+          p {
+            margin: 12px 0 5px;
+            font-size: 12px;
+          }
+        }
+
+        .signup {
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

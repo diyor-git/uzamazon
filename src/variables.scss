@@ -1,0 +1,107 @@
+$dark-blue: #241e3c;
+$pink: #e9456a;
+$plain-milkyway: #ffffff;
+$white: #ffffff;
+$gold: #ecae10;
+$black: #000000;
+
+$light-grey: #959595;
+$grey-2: #4f4f4f;
+$grey-3: #828282;
+$grey-4: #bdbdbd;
+$grey-5: #e0e0e0;
+$grey-6: #e7e7e7;
+$dark-grey: #636363;
+
+$font: "Helvetica Neue", sans-serif; //'HelveticaNeueCyr', 'Helvetica Neue', sans-serif;
+
+$shadow: 0px 2px 6px rgba(106, 106, 106, 0.26);
+$shadow-m: 0px 0px 6px rgba(106, 106, 106, 0.26);
+$shadow-s: 0px 0px 3px rgba(106, 106, 106, 0.26);
+
+$breakpoint-1: 1920px;
+$breakpoint-2: 1440px;
+$breakpoint-3: 768px;
+$breakpoint-4: 375px;
+
+@mixin section-name-36px-bold {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 0.0005em;
+
+  color: #c4c4c4;
+}
+
+@mixin navbar-20px-roman {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.0005em;
+
+  color: #c4c4c4;
+}
+
+@mixin product-name-16px-roman {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.0005em;
+
+  color: #c4c4c4;
+}
+
+@mixin roman-14px {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.0005em;
+
+  color: #c4c4c4;
+}
+
+@mixin roman-18px {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.0005em;
+
+  //color: #C4C4C4;
+}
+
+@mixin bold-18px {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.0005em;
+}
+
+@mixin bold-24px {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.0005em;
+}
+
+@mixin roman-36px {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 0.0005em;
+}
+
+@mixin bold-48px {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: 0.0005em;
+}

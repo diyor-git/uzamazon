@@ -1,0 +1,457 @@
+@import "../../../variables";
+
+.ant-progress-inner {
+  border: none;
+}
+
+.ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
+  stroke: $pink;
+}
+
+.cabinetBanner {
+  margin: 0;
+  width: 100%;
+  height: 310px;
+  background: $white;
+  text-align: center;
+
+  .bannerCabinet {
+    .changeBanner {
+      display: none;
+    }
+    &:hover{
+      .changeBanner{
+        display: block;
+        position: absolute;
+        top: 135px;
+        height: 310px;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.67);
+      }
+    }
+  }
+  button {
+    height: 45px;
+    width: 180px;
+    color: $pink;
+    background: $white;
+    border-radius: 6px;
+    margin-top: 30px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 3px solid #E9456A;
+  }
+  .pinkBtn{
+    color: $white;
+    background: $pink;
+  }
+
+  h3 {
+    margin-top: 80px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 21px
+  }
+
+  img {
+    width: 100%;
+    height: 310px;
+  }
+}
+
+.uploadBtn {
+  cursor: pointer;
+}
+
+.createCabinetPage {
+  .forms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "name site"
+    "text text";
+
+    .input {
+      margin-bottom: 20px;
+    }
+
+    .name {
+      grid-area: name;
+    }
+
+    .site {
+      grid-area: site;
+    }
+
+    .text {
+      grid-area: text;
+      margin-top: 10px;
+    }
+  }
+
+  button {
+    height: 45px;
+    width: 100%;
+    background: $pink;
+    border-radius: 6px;
+    margin-top: 30px;
+    font-size: 18px;
+    color: $white;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 18px;
+    color: $grey-3;
+    margin-top: 20px;
+  }
+
+  .profile_data {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    .forms {
+      h4 {
+        font-size: 20px;
+        color: $dark-blue;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      textarea {
+        width: 100%;
+        border: 1px solid #BDBDBD;
+        border-radius: 2px;
+        display: block;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+
+      button {
+        width: 420px;
+      }
+    }
+
+    .avatar-wrapper {
+      margin-right: 110px;
+    }
+
+    .name {
+      margin-right: 80px;
+    }
+
+    .password {
+      button {
+        border: 3px solid $pink;
+        background: transparent;
+        color: $pink;
+      }
+    }
+  }
+
+  .deleteAcc {
+    margin-top: 100px;
+    margin-bottom: 120px;
+
+    h3 {
+      font-family: "HelveticaNeueCyr", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 24px;
+      color: $dark-blue;
+      cursor: pointer;
+    }
+  }
+}
+
+@media(max-width: 1440px) {
+  .modalProfile {
+    .bold-36px {
+      font-size: 36px;
+    }
+
+    .ant-modal-content {
+      padding-top: 90px;
+      padding-bottom: 80px;
+    }
+
+    .ant-modal-footer {
+      text-align: center;
+      border: none;
+
+      button {
+        width: 180px;
+        height: 45px;
+        background: $pink;
+        border-radius: 5px;
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: $white;
+      }
+
+      .deleteButton {
+        color: $pink;
+        border: 3px solid $pink;
+        background: transparent;
+      }
+    }
+
+    .ant-modal-body {
+      text-align: center;
+
+      h3,
+      p {
+        font-weight: bold;
+        font-family: "HelveticaNeueCyr", sans-serif;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 24px;
+        color: $dark-blue;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 21px;
+        color: $grey-3;
+      }
+    }
+  }
+
+  .createCabinetPage {
+    form {
+      width: 100%;
+
+      .input-container:not(:first-of-type) {
+        margin-top: 20px;
+      }
+    }
+
+    .statistics {
+      margin-top: 90px;
+    }
+
+    button {
+      height: 45px;
+      width: 100%;
+      background: $pink;
+      border-radius: 6px;
+      margin-top: 30px;
+      font-size: 18px;
+      color: $white;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 18px;
+      color: $grey-3;
+      margin-top: 20px;
+    }
+
+    .profile_data {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+
+      .password {
+        button {
+          border: 3px solid $pink;
+          background: transparent;
+          color: $pink;
+        }
+      }
+    }
+
+    .deleteAcc {
+      margin-top: 100px;
+      margin-bottom: 120px;
+
+      h3 {
+        font-family: "HelveticaNeueCyr", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 24px;
+        color: $dark-blue;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media(max-width: 1200px) {
+  .createCabinetPage {
+    .profile_data {
+      .avatar-wrapper {
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    form {
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .createCabinetPage {
+    .profile_data {
+      grid-template-columns: 1fr 3fr;
+      gap: 0 40px;
+
+      .name {
+        margin: 0;
+      }
+
+      .forms {
+        grid-template-columns: 1fr;
+        gap: 10px 0;
+        grid-template-areas:
+        "name"
+        "site"
+        "text";
+      }
+
+      .avatar-wrapper {
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    form {
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .createCabinetPage {
+    .deleteAcc {
+      p {
+        font-size: 15px;
+        line-height: 17px;
+      }
+    }
+
+    h2 {
+      font-size: 25px;
+      line-height: 28px;
+    }
+
+    .profile_data {
+      grid-template-columns: 1fr;
+      gap: 10px 0;
+
+      .name {
+        margin: 0;
+      }
+
+      .forms {
+        grid-template-columns: 1fr;
+        gap: 20px 0;
+
+        button {
+          width: 100%;
+        }
+      }
+
+      .avatar-wrapper {
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    form {
+      width: 100%;
+    }
+  }
+  .modalProfile {
+    .ant-modal-content {
+      padding: 20px 0 20px 0;
+    }
+
+    .ant-modal-body {
+      text-align: center;
+
+      h3 {
+        font-size: 18px;
+        line-height: 14px;
+        color: $dark-blue;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 14px;
+        color: $grey-3;
+      }
+    }
+
+    .ant-modal-footer {
+      button {
+        margin: 10px 10px 0 0 !important;
+      }
+    }
+  }
+}
+
+
+.modalProfile {
+  .ant-modal-content {
+    padding-top: 90px;
+    padding-bottom: 80px;
+  }
+
+  .ant-modal-footer {
+    text-align: center;
+    border: none;
+
+    button {
+      width: 180px;
+      height: 45px;
+      background: $pink;
+      border-radius: 5px;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: $white;
+    }
+
+    .deleteButton {
+      color: $pink;
+      border: 3px solid $pink;
+      background: transparent;
+    }
+  }
+
+  .ant-modal-body {
+    text-align: center;
+
+    h3,
+    p {
+      font-weight: bold;
+      font-family: "HelveticaNeueCyr", sans-serif;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 24px;
+      color: $dark-blue;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 21px;
+      color: $grey-3;
+    }
+  }
+}

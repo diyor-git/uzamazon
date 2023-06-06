@@ -1,0 +1,67 @@
+@import "../../variables";
+
+.checkbox-group {
+  position: relative;
+  input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    position: absolute;
+    z-index: 1;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    cursor: default;
+
+    @media(max-width:576px){
+      font-size: 12px;
+    }
+
+    &::before {
+      content: "";
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 16px;
+      min-width: 16px;
+      height: 16px;
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 1px solid $grey-3;
+      border-radius: 2px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    &.alert,
+    &.red,
+    &.pink {
+      &::before {
+        border-color: $pink;
+      }
+    }
+  }
+
+  input:checked + label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.55556L4.63636 9L11 1' stroke='%23E9456A' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    padding-top: 16px;
+    width: 16px;
+  }
+}

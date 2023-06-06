@@ -1,0 +1,14 @@
+{
+  "shown": "Showing",
+  "results": "results of",
+  "noResults": "results",
+  "sort": "Sort:",
+  "filters": "Filters",
+  "selectSort": "Select sorting",
+  "sortMin": "Price: low-high",
+  "sortMax": "Price: high-low",
+  "higher": "Higher",
+  "min": "$ Minimum",
+  "max": "$ Maximum",
+  "apply": "Apply"
+}

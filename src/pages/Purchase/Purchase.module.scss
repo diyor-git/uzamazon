@@ -1,0 +1,231 @@
+@import "../../variables";
+
+.purchase {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0 25px;
+
+  h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: 0.0005em;
+    color: $dark-blue;
+  }
+
+  .avatar {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    span {
+      margin: 30px auto 30px auto;
+      display: flex;
+    }
+  }
+
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 25px;
+    grid-template-areas: "city payment";
+
+    .city {
+      grid-area: city;
+    }
+
+    .paymentMethodWrapper {
+      grid-area: payment;
+    }
+  }
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  width: 420px;
+
+  &.mt0 {
+    margin-top: 0;
+  }
+
+  label {
+    @include roman-18px;
+    line-height: 21px;
+    height: 21px;
+    color: $dark-blue;
+  }
+
+  input {
+    width: 100%;
+    margin-top: 10px;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #bdbdbd;
+    border-radius: 2px;
+    color: $grey-2;
+  }
+
+  &.required {
+    label:after {
+      content: "*";
+      color: $gold;
+    }
+  }
+}
+
+.userInfo {
+  button {
+    height: 46px;
+    margin-top: 40px;
+    border: 3px solid #e9456a;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 0 33px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0.0005em;
+    color: #e9456a;
+  }
+}
+
+.paymentMethodWrapper {
+  padding-left: 25px;
+  border-left: 2px solid $grey-5;
+
+  .paymentMethod {
+    margin-top: 30px;
+
+    .textareaGroup {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+
+      label {
+        margin-bottom: 10px;
+      }
+
+      textarea {
+        width: 100%;
+        height: 135px;
+        border: 1px solid $grey-4;
+        border-radius: 2px;
+        resize: none;
+        padding: 15px;
+        @include roman-18px;
+        color: $grey-2;
+      }
+    }
+
+    .totalAmount {
+      margin-top: 30px;
+
+      span {
+        @include bold-24px;
+        line-height: 24px;
+        color: $pink;
+        margin-left: 20px;
+      }
+    }
+
+    button {
+      height: 46px;
+      width: 100%;
+      margin-top: 30px;
+      background: #e9456a;
+      box-sizing: border-box;
+      border-radius: 6px;
+      padding: 0 33px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 0.0005em;
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .purchase {
+    grid-template-columns: 1fr;
+    gap: 50px 0;
+
+    .avatar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .purchase {
+    display: grid;
+    grid-template-columns: 1fr;
+    h1 {
+      font-size: 30px;
+    }
+    .paymentMethodWrapper {
+      border: none;
+    }
+
+    .avatar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .form {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        ". city"
+        "payment payment";
+      gap: 50px 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .purchase {
+    .avatar_block {
+      span {
+        margin: 20px auto 50px auto;
+        display: flex;
+      }
+    }
+    .userInfo {
+      a {
+        display: flex;
+      }
+    }
+    .inputGroup {
+      width: 100%;
+    }
+    .paymentMethodWrapper {
+      padding: 0;
+    }
+    .avatar {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .form {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "city city"
+        "payment payment";
+      gap: 50px 0;
+    }
+  }
+}
+@media (max-width: 568px) {
+  .purchase {
+    h1 {
+      font-size: 25px;
+    }
+  }
+}

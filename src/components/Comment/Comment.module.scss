@@ -1,0 +1,85 @@
+@import '../../variables';
+
+.feedback {
+  padding-top: 200px;
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+
+  .avatar {
+    margin-right: 20px;
+  }
+
+  .feedbackContainer {
+    h4 {
+      font-weight: bold;
+      font-size: 24px;
+      color: $dark-blue;
+      margin-bottom: 13px;
+    }
+
+    .rating {
+      display: flex;
+      margin-bottom: 20px;
+
+      p {
+        font-size: 18px;
+        color: $dark-blue;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  form {
+    width: 925px;
+    text-align: center;
+    position: relative;
+  }
+
+  textarea {
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 925px;
+    height: 160px;
+    padding: 15px 20px 15px 20px;
+    resize: none;
+    position: relative;
+  }
+
+  .clip {
+    position: absolute;
+    right: 20px;
+    bottom: 90px;
+    cursor: pointer;
+  }
+
+  button {
+    background: $pink;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 18px;
+    color: $white;
+    width: 180px;
+    height: 42px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .feedback {
+    form{
+      width: 100%;
+    }
+    textarea {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .feedback {
+    grid-template-columns: 1fr;
+    .avatar{
+      display: none;
+    }
+  }
+}

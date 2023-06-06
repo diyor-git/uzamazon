@@ -1,0 +1,47 @@
+@import "../../variables";
+
+.ant-rate {
+  color: $pink;
+
+  &.ant-rate-disabled {
+    .ant-rate-star > div:hover,
+    .ant-rate-star > div:focus {
+      transform: none;
+    }
+  }
+}
+
+.ant-rate-star {
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  svg{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.ant-rate-star-first,
+.ant-rate-star-second {
+  color: $white;
+}
+
+
+@media (max-width: $breakpoint-3) and (min-width: $breakpoint-4 + 1) {
+  .ant-rate-star{
+    svg{
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-4){
+  .ant-rate-star{
+    svg{
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
